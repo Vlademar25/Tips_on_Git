@@ -152,13 +152,15 @@ Staged и Modified
 Интересный кейс с данными статусами файлов.
 Если, к примеру, выполнить команду git add, то файл с изменениями попадёт в staged area и получит статус staged. Если следом до коммита сделать новые изменения в файле, то данная версия получит статус modified. Чтобы снова добавить файл в staged нужно повторить команду git add.
 
-Опишем несколько схем изменения статусов файлов:
+Опишем схему изменения статусов файлов:
 
 
 
 ```mermaid
 graph LR;
-	create new file --> untracked -- "git add" --> staged, tracked -- "git commit" --> tracked;
-	modify file --> modified, tracked -- "git add" --> staged, tracked -- "git commit" --> tracked;
+	B[untracked] -- "git add" --> C[staged, tracked] -- "git commit" --> D[tracked];
+	E[modified, tracked] -- "git add" --> C[staged, tracked];
+	C -- "modify file" --> E;
+	D -- "modify file" --> E;
 ```
 
