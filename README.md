@@ -158,7 +158,7 @@ Staged и Modified
 
 ```mermaid
 graph LR;
-* create new file --> untracked -- "git add" --> staged, tracked -- "git commit" --> tracked
-* modify file --> modified, tracked -- "git add" --> staged, tracked -- "git commit" --> tracked
+	create new file --> untracked -- "git add" --> staged, tracked -- "git commit" --> tracked;
+	modify file --> modified, tracked -- "git add" --> staged, tracked -- "git commit" --> tracked;
 ```
 
