@@ -158,8 +158,8 @@ Staged и Modified
 
 ```mermaid
 graph LR;
-	B[untracked] -- "git add" --> C[staged, tracked] -- "git commit" --> D[tracked];
-	E[modified, tracked] -- "git add" --> C[staged, tracked];
+	B[untracked] -- "git add" --> C[staged + tracked] -- "git commit" --> D[tracked];
+	E[modified + tracked] -- "git add" --> C[staged + tracked];
 	C -- "modify file" --> E;
 	D -- "modify file" --> E;
 ```
